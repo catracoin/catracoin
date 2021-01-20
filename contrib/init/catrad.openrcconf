@@ -1,0 +1,33 @@
+# /etc/conf.d/catrad: config file for /etc/init.d/catrad
+
+# Config file location
+#CATRAD_CONFIGFILE="/etc/catra/catra.conf"
+
+# What directory to write pidfile to?  (created and owned by $CATRAD_USER)
+#CATRAD_PIDDIR="/var/run/catrad"
+
+# What filename to give the pidfile
+#CATRAD_PIDFILE="${CATRAD_PIDDIR}/catrad.pid"
+
+# Where to write catrad data (be mindful that the blockchain is large)
+#CATRAD_DATADIR="/var/lib/catrad"
+
+# User and group to own catrad process
+#CATRAD_USER="catra"
+#CATRAD_GROUP="catra"
+
+# Path to catrad executable
+#CATRAD_BIN="/usr/bin/catrad"
+
+# Nice value to run catrad under
+#CATRAD_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+#CATRAD_OPTS=""
+
+# The timeout in seconds OpenRC will wait for catrad to terminate
+# after a SIGTERM has been raised.
+# Note that this will be mapped as argument to start-stop-daemon's
+# '--retry' option, which means you can specify a retry schedule
+# here. For more information see man 8 start-stop-daemon.
+CATRAD_SIGTERM_TIMEOUT=60
